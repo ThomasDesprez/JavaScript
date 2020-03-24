@@ -1,0 +1,82 @@
+.application {
+    margin: auto;
+    width: 20%;
+    border-radius: 5% 5% 0% 0%;
+    background-color: white;
+    border: thick 1px black;
+}
+
+.image_fond {
+    min-height: 200px;
+    background-image: url("../images/foret.jpg");
+    border-radius: inherit;
+    background-size: cover;
+    text-align: left;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+#date {
+    color: white;
+    font: 200;
+    margin-bottom: 0px;
+    position: absolute;
+}
+
+.check {
+    text-decoration: line-through;
+}
+
+#refresh {
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+h1 {
+    vertical-align: bottom;
+}
+
+.label_task {
+    cursor: pointer;
+    font-size: larger;
+    color: darkgrey;
+}
+
+.delete {
+    max-height: 30px;
+    vertical-align: middle;
+}
+
+#taches {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 40vh;
+    min-height: 40vh;
+}
+
+.tache {
+    padding: 5px 0px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+form>img {
+    height: 4vh;
+    vertical-align: middle;
+}
+
+form>input {
+    height: 4vh;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.champ_add {
+    padding: 5px;
+    border-top: 1px solid rgb(177, 177, 177);
+}
