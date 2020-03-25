@@ -1,7 +1,7 @@
 .application {
     margin: auto;
     width: 20%;
-    border-radius: 5% 5% 0% 0%;
+    border-radius: 10px 10px 0px 0px;
     background-color: white;
     border: thick 1px black;
 }
@@ -12,6 +12,7 @@
     border-radius: inherit;
     background-size: cover;
     text-align: left;
+    position: relative;
 }
 
 body {
@@ -21,8 +22,9 @@ body {
 #date {
     color: white;
     font: 200;
-    margin-bottom: 0px;
     position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
 }
 
 .check {
@@ -30,9 +32,9 @@ body {
 }
 
 #refresh {
+    top: 10px;
+    right: 10px;
     position: absolute;
-    margin-top: 10px;
-    margin-right: 100px;
 }
 
 h1 {
@@ -61,7 +63,7 @@ h1 {
 .tache {
     padding: 5px 0px;
     background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(177, 177, 177);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 form>img {

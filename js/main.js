@@ -3,6 +3,19 @@ refresh.addEventListener("click", function() {
     clearTasks();
 });
 
+var plus_task = document.getElementById("add_task");
+plus_task.addEventListener("click", () => {
+    add_task();
+});
+
+Object.keys(localStorage).forEach((key) => {
+    taches.insertAdjacentHTML('beforeEnd', localStorage.getItem(key));
+    addEvents(localStorage.key(key).split("task_")[1]);
+
+});
+
+show_date();
+
 function add_task() {
     var input_task = document.getElementById('input_task').value.trim();
     if (input_task == "") {
@@ -16,19 +29,6 @@ function add_task() {
         localStorage.setItem(set_tasks_properties(id), create_task_html(id, input_task));
     }
 }
-
-
-var plus_task = document.getElementById("add_task");
-plus_task.addEventListener("click", () => {
-    add_task();
-});
-
-
-Object.keys(localStorage).forEach((key) => {
-    taches.insertAdjacentHTML('beginend', localStorage.getItem(key));
-    addEvents(localStorage.key(key).split("task_")[1]);
-
-});
 
 function create_task_id(id) {
     return "task_" + id;
@@ -50,6 +50,7 @@ function set_tasks_properties(id) {
     addEvents(id);
     return id_task;
 }
+
 //Si la tache est déjà cochée, décoche 
 function checked(id) {
 
@@ -68,8 +69,6 @@ function checked(id) {
         localStorage.setItem(create_task_id(id), create_task_html(id, label.innerHTML, check_attr));
     }
     label.classList.toggle("check");
-
-
 }
 
 function delete_task(id) {
@@ -104,5 +103,3 @@ function show_date() {
     document.getElementById("date").innerText = date.toLocaleDateString('fr-FR', options);
 
 }
-
-show_date();
